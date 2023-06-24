@@ -1,0 +1,21 @@
+:root{   
+    --cor-blanco:#FFFFFF;
+    --cor-gris: #353944;
+    --cor-gris-claro:#A2A2A2;
+    --cor-de-link: #000;
+    --cor-azul-negro:#060e29;
+    --cor-azul: #2A7AE4;
+    --cor-turquesa-claro: #37c9db;
+    --cor-de-advertencia: #FF0000;
+}
+
+
+ol,ul,li {
+    display: flex;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}

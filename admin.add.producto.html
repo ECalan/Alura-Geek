@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AluraGeek</title>
+  <link rel="stylesheet" href="/assets/css/base/reset.css" />
+  <link rel="stylesheet" href="/assets/css/base/base.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="/assets/css/componentes/menu.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/admin.productos.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/footer.css" />
+  <link rel="icon" href="/assets/img/icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="todo">
+  <header>
+    <div class="header_search">
+      <div class="header_container_logo">
+        <img class="header__logo" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek" id="Logo_AluraGeek" />
+      </div>
+      <input class="header_barra_busqueda" type="search" alt="Busqueda" placeholder="  ¿Qué deseas Buscar?">
+      <img src="/assets/img/Buscar_icono.png" alt="icono Buscar" class="header_busqueda_icono">
+    </div>
+    <img class="header_avatar" src="/assets/img/Avatar_Kirito.png" alt="">
+    <button class="header_boton" id="menu_admin">Menú Administrador</button>
+  </header>
+  <main>
+    <form class="productos" id="form_productos">
+      <div class="productos_container" id="prueba_image">
+        <h1 class="productos_titulo">Agregar Producto</h1>
+        <div class="drop-area">
+          <div class="drop-area_preview" id="preview"></div>
+          <h2 class="drop-area_text" id="drop-area_texto">Arrastra y suelta tu imágen</h2>
+          <span class="drop-area_text-span">o</span>
+          <button class="drop-area_boton" id="drop-area_button">Selecciona tu archivos</button>
+          <input class="drop-area_input" id="input_file" type="file" name="file" hidden>
+        </div>
+        <div class="productos_input_container">
+          <h1 class="productos_select_titulo">Seleciona la sección</h1>
+          <select class="productos_select_selector" id="selector" name="select" required>
+            <option class="productos_select_option" value="diversos" selected>Diversos</option>
+            <option class="productos_select_option" value="demonSlayer">Demon Slayer</option>
+            <option class="productos_select_option" value="consolas">Consolas</option>
+          </select>
+        </div>
+        <div class="productos_input_container">
+          <input class="productos_input" id="nombre_producto" type="text" name="nombre_producto"
+            placeholder="Nombre del producto" pattern="[a-zA-Z0-9ñÑ\- ]{2,50}" required data-tipo="nombre_producto"
+            data-nombre_producto>
+          <label class="productos_input__label" for="nombre_producto">Nombre del producto</label>
+          <span class="productos_input__message__error">Este campo no es valido</span>
+        </div>
+        <div class="productos_input_container">
+          <input class="productos_input" id="precio_producto" type="text" name="precio"
+            placeholder="Precio del producto" pattern="[0-9]{1,6}[.][0-9]{2}" required data-tipo="precio_producto"
+            data-precio_producto>
+          <label class="productos_input__label" for="precio">Precio del producto</label>
+          <span class="productos_input__message__error">Este campo no es valido</span>
+        </div>
+        <div class="productos_input_container">
+          <input class="productos_input" id="descripcion_producto" type="text" name="descripcion"
+            placeholder="Descripción del producto" pattern="[a-zA-Z0-9 ]{4,100}" required
+            data-tipo="descripcion_producto" data-descripcion_producto>
+          <label class="productos_input__label" for="descripcion">Descripción del producto</label>
+          <span class="productos_input__message__error">Este campo no es valido</span>
+        </div>
+        <button class="productos_boton">Agregar producto</button>
+      </div>
+    </form>
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="footer_img_container">
+        <img class="footer_img" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek" id="Logo_AluraGeek2">
+      </div>
+      <div class="footer_information">
+        <div class="footer_information_container">
+          <a class="footer_link" href="#">Quienes somos</a>
+          <a class="footer_link" href="#">Política de privacidad</a>
+          <a class="footer_link" href="#">Programa de fidelidad</a>
+          <a class="footer_link" href="#">Nuestras Tiendas</a>
+          <a class="footer_link" href="#">Quiero ser franquiciado</a>
+          <a class="footer_link" href="#">Anúncia aqui</a>
+        </div>
+      </div>
+      <form class="footer_message_container" id="footer_message">
+        <h3 class="footer_message_titulo">Hable con nosotros</h3>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_nombre" type="text" name="name" placeholder="Nombre"
+            pattern="[a-zA-Z ]{4,50}" required data-tipo="nombre" data-nombre>
+          <label class="footer_message_input__label" for="name">Nombre</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_mensaje" type="text" name="mensaje"
+            placeholder="Escribe tu mensaje" pattern="[a-zA-Z0-9 ]{4,100}" required data-tipo="mensaje" data-mensaje>
+          <label class="footer_message_input__label" for="mensaje">Mensaje</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <button class="footer_message_boton" id="boton_contacto">Enviar mensaje</button>
+      </form>
+    </section>
+    <section class="footer_developer">
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Tanjiro Kamado.png" alt="Chibi Tanjiro Kamado">
+      <p class="footer_developer_name">
+        Desarrollado por Eddy Calan
+        <br>2023
+      </p>
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Nesuko Kamado.png" alt="Chibi Nesuko Kamado">
+    </section>
+  </footer>
+  <!-- toastyfy -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- escucha: login y registro del administrador -->
+  <script type="module" src="/assets/js/admin.escucha.login.add.remove.js"></script>
+  <!-- boton para el menú -->
+  <script src="/assets/js/botones/boton.menu.admin.js"></script>
+  <!-- subida de archivo -->
+  <script type="module" src="./assets/js/botones/boton.file.upload.js"></script>
+  <!-- validaciones -->
+  <script type="module" src="/assets/js/validaciones/app.js"></script>
+  <!-- form de mensajes -->
+  <script type="module" src="/assets/js/botones/boton.mensaje.js"></script>
+  <!-- iconos para página principal -->
+  <script src="/assets/js/botones/botones.pagina.principal.js"></script>
+  <!-- en construcción -->
+  <script src="/assets/js/botones/links.about.js"></script>
+</body>
+
+</html>

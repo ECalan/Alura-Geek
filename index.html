@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AluraGeek</title>
+  <link rel="stylesheet" href="/assets/css/base/reset.css" />
+  <link rel="stylesheet" href="/assets/css/base/base.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/base/base.modal.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="/assets/css/componentes/form_login.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/form_registro.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/menu.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/producto.en.carrito.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/banner.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/secciones.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/producto.individual.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/footer.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/compra.completada.css" />
+  <link rel="icon" href="/assets/img/icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="todo">
+  <!-- Modal para el Login -->
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-1" id="exampleModalToggleLabel">Cliente</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- modal cliente -->
+        <div class="modal-body">
+          <!-- "Autenticación para Cliente" --> <!-- Show a second modal and hide this one with the button below. -->
+          <form class="form_login" id="form_login_client">
+            <div class="form_login_container">
+              <h1 class="form_login_titulo">Iniciar Sesión </h1>
+              <div class="form_login_input_container">
+                <input class="form_login_input" id="email_login_client" type="email" name="email" placeholder="E-mail"
+                  required data-tipo="email" data-email autocomplete="username">
+                <label class="form_login_input__label" for="email">Email</label>
+                <span class="form_login_input__message__error">Este campo no es valido</span>
+              </div>
+              <div class="form_login_input_container">
+                <input class="form_login_input" id="password_login" name="password" class="input" type="password"
+                  placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$"
+                  title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales"
+                  data-tipo="password" autocomplete="current-password">
+                <label class="form_login_input__label" for="password">contraseña</label>
+                <span class="form_login_input__message__error">Este campo no es valido</span>
+                <img class="form_login_eye-show" id="show_hidden" src="/assets/img/eye_slash_visible_hide_hidden.png"
+                  alt="icono ver password">
+              </div>
+              <button class="form_login_boton">Entrar</button>
+            </div>
+          </form>
+          <!-- "Registro para Cliente" -->
+          <form class="form_registro" id="form_registro_client">
+            <div class="form_registro_container">
+              <h1 class="form_registro_titulo">Nuevo Cliente</h1>
+              <div class="form_registro_input_container">
+                <input class="form_registro_input" id="email_registro_client" type="email" name="email"
+                  placeholder="E-mail" required data-tipo="email" data-email autocomplete="username">
+                <label class="form_registro_input__label" for="email">Email</label>
+                <span class="form_registro_input__message__error">Este campo no es valido</span>
+              </div>
+              <div class="form_registro_input_container">
+                <input class="form_registro_input" id="password_registro" name="password" class="input" type="password"
+                  placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$"
+                  title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales"
+                  data-tipo="password" autocomplete="current-password">
+                <label class="form_registro_input__label" for="password">contraseña</label>
+                <span class="form_registro_input__message__error">Este campo no es valido</span>
+                <img class="form_registro_eye-show" id="show_hidden_registro"
+                  src="/assets/img/eye_slash_visible_hide_hidden.png" alt="icono ver password">
+              </div>
+              <button class="form_registro_boton">Registrar</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="header_boton" id="login_singup">Registrarse</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
+            data-bs-toggle="modal">Administrador</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-1" id="exampleModalToggleLabel2">Administrador</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal para el Admin -->
+        <div class="modal-body">
+          <!-- "Autenticación para Administrador" --> <!-- Hide this modal and show the first with the button below. -->
+          <form class="form_login form_login_admin" id="form_autentic_admin">
+            <div class="form_login_container">
+              <h1 class="form_login_titulo">Autenticación</h1>
+              <div class="form_login_input_container">
+                <input class="form_login_input" id="email_login_admin" type="email" name="email" placeholder="E-mail"
+                  required data-tipo="email" data-email autocomplete="username">
+                <label class="form_login_input__label" for="email">Email</label>
+                <span class="form_login_input__message__error">Este campo no es valido</span>
+              </div>
+              <div class="form_login_input_container">
+                <input class="form_login_input" id="password_login_admin" name="password" class="input" type="password"
+                  placeholder="Contraseña" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$"
+                  title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales"
+                  data-tipo="password" autocomplete="current-password">
+                <label class="form_login_input__label" for="password">contraseña</label>
+                <span class="form_login_input__message__error">Este campo no es valido</span>
+                <img class="form_login_eye-show" id="show_hidden_admin"
+                  src="/assets/img/eye_slash_visible_hide_hidden.png" alt="icono ver password">
+              </div>
+              <button class="form_login_boton">Entrar</button>
+            </div>
+          </form>
+          <!-- "Registro para Administrador" -->
+          <form class="form_registro form_registro_admin" id="form_registro_admin">
+            <div class="form_registro_container">
+              <h1 class="form_registro_titulo">Nuevo Administrador</h1>
+              <div class="form_registro_input_container">
+                <input class="form_registro_input" id="email_registro_admin" type="email" name="email"
+                  placeholder="E-mail" required data-tipo="email" data-email autocomplete="username">
+                <label class="form_registro_input__label" for="email">Email</label>
+                <span class="form_registro_input__message__error">Este campo no es valido</span>
+              </div>
+              <div class="form_registro_input_container">
+                <input class="form_registro_input" id="password_registro_admin" name="password" class="input"
+                  type="password" placeholder="Contraseña" required
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,12}$"
+                  title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales"
+                  data-tipo="password" autocomplete="current-password">
+                <label class="form_registro_input__label" for="password">contraseña</label>
+                <span class="form_registro_input__message__error">Este campo no es valido</span>
+                <img class="form_registro_eye-show" id="show_hidden_registro_admin"
+                  src="/assets/img/eye_slash_visible_hide_hidden.png" alt="icono ver password">
+              </div>
+              <button class="form_registro_boton" id="boto_registro_admin">Registrar</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="header_boton" id="autentic_singup">Nuevo Administrador</button>
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cliente</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal para el contenido individual -->
+  <div class="modal fade" id="contenido_individual" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content modal_contenido">
+        <!-- Aqui el contenido del modal -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body" id="modal_contenido">
+          <section class="galeria articulos_relacionados_container" id="demon_slayer_container">
+            <div class="galeria_encabezado">
+              <h2 class="galeria_titulo">Demon Slayer - productos relacionados</h2>
+            </div>
+            <div class="galeria_articulos_relacionados articulos_relacionados" id="demonSlayer">
+              <!-- aqui el contenido individual -->
+            </div>
+          </section>
+          <section class="galeria articulos_relacionados_container" id="consolas_container">
+            <div class="galeria_encabezado">
+              <h2 class="galeria_titulo">Consolas - productos relacionados</h2>
+            </div>
+            <div class="galeria_articulos_relacionados articulos_relacionados" id="consolas">
+              <!-- aqui el contenido individual -->
+            </div>
+          </section>
+          <section class="galeria articulos_relacionados_container" id="diversos_container">
+            <div class="galeria_encabezado">
+              <h2 class="galeria_titulo">Diversos - productos relacionados</h2>
+            </div>
+            <div class="galeria_articulos_relacionados articulos_relacionados" id="diversos">
+              <!-- aqui el contenido individual -->
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal para la compra completada -->
+  <div class="modal fade" id="compra_final" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-2" id="exampleModalLabel">&#128512; Compra realizada con exito!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="compra_container">
+            <div class="compra_container_img">
+              <img src="/assets/img/check-mark.gif" alt="check_success">
+            </div>
+            <div class="compra_container_text">
+              <p class="compra_descripcion">Articulos:</p>
+              <p class="compra_total" id="compra_total_articulos">0</p>
+              <p class="compra_descripcion">Total de compra:</p>
+              <p class="compra_total" id="compra_total_valor">$00.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="boton_compra_nuevo_producto" id="boton_compra_nueva" data-bs-dismiss="modal">Comprar nuevos
+            productos</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ******************************** -->
+  <!-- ------- Codigo Principal ------- -->
+  <header>
+    <div class="header_search">
+      <div class="header_container_logo">
+        <img class="header__logo" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek" />
+      </div>
+      <input class="header_barra_busqueda" id="boton_search" type="search" alt="Busqueda"
+        placeholder="  ¿Qué deseas Buscar?">
+      <img src="/assets/img/Buscar_icono.png" alt="icono Buscar" class="header_busqueda_icono">
+    </div>
+    <div class="carrito_container">
+      <!-- collapse para el carrito -->
+      <p>
+        <img class="carrito_img" id="carrito_buy" src="/assets/img/carrito_de_compras.png" alt="Carrito de compras"
+          data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false"
+          aria-controls="collapseWidthExample">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="carrito_badge"
+          data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false"
+          aria-controls="collapseWidthExample">
+          <!-- aqui el contador de articulos -->
+          0
+        </span>
+      <p></p>
+      </p>
+      <div class="collapse_container" style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+          <div class="card card-body" id="compras" style="width: 300px;">
+            <!-- Aquí el contenido del collapse -->
+            <div class="cantidad_compra_container">
+              <div class="boton_container">
+                <button class="boton_comprar_final" id="boton_compra_finalizada" data-bs-toggle="modal"
+                  data-bs-target="#compra_final">Comprar</button>
+              </div>
+              <div class="text_compra_container">
+                <p class="valor_comprado">Total a comprar:</p>
+                <p class="valor_comprado" id="precio_total">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="header_boton opacity" id="client_logout">Logout</button>
+    <button class="header_boton" id="loginup" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button>
+  </header>
+  <main id="gallery">
+    <section class="banner">
+      <img class="banner_img" src="/assets/img/Figuras_banner.png" alt="banner promociones">
+      <div class="banner_promociones">
+        <h1 class="banner_promociones_mes_promo">Mayo promocional</h1>
+        <p class="banner_promociones_promo">Productos seleccionados con 33% de descuento</p>
+        <a class="banner_promociones_boton" href="#cosolas_enlace">Ver consolas</a>
+      </div>
+    </section>
+    <section class="galeria" id="demon_slayer">
+      <div class="galeria_encabezado">
+        <h2 class="galeria_titulo">Demon Slayer</h2>
+        <a class="galeria_ver_todo" data-bs-toggle="modal" data-bs-target="#contenido_individual" href="#">Ver todo
+          →</a>
+      </div>
+      <div class="galeria_contenido" id="contenido_demonslayer">
+        <!-- Aquí el contenido desde el server -->
+      </div>
+    </section>
+    <section class="galeria" id="consolas">
+      <div class="galeria_encabezado" id="cosolas_enlace">
+        <h2 class="galeria_titulo">Consolas</h2>
+        <a class="galeria_ver_todo" data-bs-toggle="modal" data-bs-target="#contenido_individual" href="#">Ver todo
+          →</a>
+      </div>
+      <div class="galeria_contenido" id="contenido_consolas">
+        <!-- Aquí el contenido desde el server -->
+      </div>
+    </section>
+    <section class="galeria" id="diversos">
+      <div class="galeria_encabezado">
+        <h2 class="galeria_titulo">Diversos</h2>
+        <a class="galeria_ver_todo" data-bs-toggle="modal" data-bs-target="#contenido_individual" href="#">Ver todo
+          →</a>
+      </div>
+      <div class="galeria_contenido" id="contenido_diversos">
+        <!-- Aquí el contenido desde el server -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="footer_img_container">
+        <img class="footer_img" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek">
+      </div>
+      <div class="footer_information">
+        <div class="footer_information_container">
+          <a class="footer_link" href="#">Quienes somos</a>
+          <a class="footer_link" href="#">Política de privacidad</a>
+          <a class="footer_link" href="#">Programa de fidelidad</a>
+          <a class="footer_link" href="#">Nuestras Tiendas</a>
+          <a class="footer_link" href="#">Quiero ser franquiciado</a>
+          <a class="footer_link" href="#">Anúncia aqui</a>
+        </div>
+      </div>
+      <form class="footer_message_container" id="footer_message">
+        <h3 class="footer_message_titulo">Hable con nosotros</h3>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_nombre" type="text" name="name" placeholder="Nombre"
+            pattern="[a-zA-Z ]{4,50}" required data-tipo="nombre" data-nombre>
+          <label class="footer_message_input__label" for="name">Nombre</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_mensaje" type="text" name="mensaje"
+            placeholder="Escribe tu mensaje" pattern="[a-zA-Z0-9 ]{4,100}" required data-tipo="mensaje" data-mensaje>
+          <label class="footer_message_input__label" for="mensaje">Mensaje</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <button class="footer_message_boton" id="boton_contacto">Enviar mensaje</button>
+      </form>
+    </section>
+    <section class="footer_developer">
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Tanjiro Kamado.png" alt="Chibi Tanjiro Kamado">
+      <p class="footer_developer_name">
+        Desarrollado por Eddy Calan
+        <br>2023
+      </p>
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Nesuko Kamado.png" alt="Chibi Nesuko Kamado">
+    </section>
+  </footer>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- toastyfy -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- carga de imagenes -->
+  <script type="module" src="/assets/js/botones/index.file.charge.js"></script>
+  <!-- estado del login button -->
+  <script src="/assets/js/login.state.js"></script>
+  <!-- login y registro del cliente -->
+  <script type="module" src="/assets/js/client.escucha.login.js"></script>
+  <script src="/assets/js/botones/botones.login.singup.js"></script>
+  <!-- autentic y registro del administrador -->
+  <script type="module" src="./assets/js/admin.escucha.login.js"></script>
+  <script src="/assets/js/botones/botones.autentic.registro.js"></script>
+  <!-- validaciones -->
+  <script src="/assets/js/validaciones/password.show.hidden.js"></script>
+  <script type="module" src="/assets/js/validaciones/app.js"></script>
+  <!-- form para mensajes -->
+  <script type="module" src="/assets/js/botones/boton.mensaje.js"></script>
+  <!-- buscador del navegador -->
+  <script type="module" src="/assets/js/botones/boton.search.js"></script>
+  <!-- compras -->
+  <script type="module" src="/assets/js/botones/boton.comprar.js"></script>
+  <!-- en construcción -->
+  <script src="/assets/js/botones/links.about.js"></script>
+</body>
+
+</html>

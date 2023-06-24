@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AluraGeek</title>
+  <link rel="stylesheet" href="/assets/css/base/reset.css" />
+  <link rel="stylesheet" href="/assets/css/base/base.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/menu.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/pagina.en.construccion.css" />
+  <link rel="stylesheet" href="/assets/css/componentes/footer.css" />
+  <link rel="icon" href="/assets/img/icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+
+<body class="todo">
+  <header>
+    <div class="header_search">
+      <div class="header_container_logo">
+        <img class="header__logo" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek" id="Logo_AluraGeek" />
+      </div>
+      <input class="header_barra_busqueda" type="search" alt="Busqueda" placeholder="  ¿Qué deseas Buscar?">
+      <img src="/assets/img/Buscar_icono.png" alt="icono Buscar" class="header_busqueda_icono">
+    </div>
+    <button class="header_boton" id="regresar_pagina_principal">Regresar</button>
+  </header>
+  <main>
+    <div class="contenido_container">
+      <img class="contenido_pagina_en_constuccion" src="/assets/img/page_en_construccion.jpg"
+        alt="Página en construcción">
+      <img class="contenido_fondo" src="/assets/img/fondo_turquesa.png" alt="">
+      <img class="contenido_loading_bar" src="/assets/img/Loading_Bar.gif" alt="">
+      <h1 class="contenido_texto">Página en construcción</h1>
+    </div>
+  </main>
+  <footer>
+    <section class="footer">
+      <div class="footer_img_container">
+        <img class="footer_img" src="/assets/img/Logo_AluraGeek.png" alt="Logo AluraGeek" id="Logo_AluraGeek2">
+      </div>
+      <div class="footer_information">
+        <a class="footer_link" href="#">Quienes somos</a>
+        <a class="footer_link" href="#">Política de privacidad</a>
+        <a class="footer_link" href="#">Programa de fidelidad</a>
+        <a class="footer_link" href="#">Nuestras Tiendas</a>
+        <a class="footer_link" href="#">Quiero ser franquiciado</a>
+        <a class="footer_link" href="#">Anúncia aqui</a>
+      </div>
+      <form class="footer_message_container" id="footer_message">
+        <h3 class="footer_message_titulo">Hable con nosotros</h3>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_nombre" type="text" name="name" placeholder="Nombre"
+            pattern="[a-zA-Z ]{4,50}" required data-tipo="nombre" data-nombre>
+          <label class="footer_message_input__label" for="name">Nombre</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <div class="footer_message">
+          <input class="footer_message_input" id="footer_mensaje" type="text" name="mensaje"
+            placeholder="Escribe tu mensaje" pattern="[a-zA-Z0-9 ]{4,100}" required data-tipo="mensaje" data-mensaje>
+          <label class="footer_message_input__label" for="mensaje">Mensaje</label>
+          <span class="footer_message_input__message__error">Este campo no es valido</span>
+        </div>
+        <button class="footer_message_boton" id="boton_contacto">Enviar mensaje</button>
+      </form>
+    </section>
+    <section class="footer_developer">
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Tanjiro Kamado.png" alt="Chibi Tanjiro Kamado">
+      <p class="footer_developer_name">
+        Desarrollado por Eddy Calan
+        <br>2023
+      </p>
+      <img class="footer_img_laterales" src="/assets/img/Chibi_Nesuko Kamado.png" alt="Chibi Nesuko Kamado">
+    </section>
+  </footer>
+  <!-- validaciones -->
+  <script type="module" src="/assets/js/validaciones/app.js"></script>
+  <!-- form de mensajes -->
+  <script type="module" src="/assets/js/botones/boton.mensaje.js"></script>
+  <!-- iconos para página principal -->
+  <script src="/assets/js/botones/botones.pagina.principal.js"></script>
+  <!-- en construcción -->
+  <script src="/assets/js/botones/links.about.js"></script>
+</body>
+
+</html>

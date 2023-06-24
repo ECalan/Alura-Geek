@@ -1,0 +1,36 @@
+@import url(./variables.css);
+
+body{
+    background-image: url("/assets/img/Background_body.jpg");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.todo{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:hover{
+    color: var(--cor-turquesa-claro);
+}
+
+
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+
+ 
+    
+}
+
+/*Mobile*/
+@media screen and (max-width: 414px){
+
+    
+
+}
+    
+    

@@ -1,0 +1,90 @@
+.articulo_en_carrito{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.articulo_container{
+    display: flex;
+    width: 100%;
+}
+
+.articulo_img_container{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 0.5rem;
+    width: 50%;
+    height: 120px;
+}
+
+.img_individual{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.articulo_contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.producto_individual{
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.precio_individual{
+    font-weight: 700;
+    margin: 0;
+}
+
+.boton_quita_carrito{
+    width: 130px;
+    border-color: var(--cor-azul);
+    border-radius: 10px;
+    background-color: var(--cor-de-advertencia);
+    color: var(--cor-blanco);
+}
+
+.cantidad_compra_container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.boton_container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.boton_comprar_final{
+    width: 90%;
+    height: 80%;
+    border-color: var(--cor-azul);
+    border-radius: 10px;
+    background-color: var(--cor-azul);
+    color: var(--cor-blanco);
+}
+
+.text_compra_container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+p.valor_comprado{
+    font-weight: 700;
+    margin-bottom: 0;
+}
+

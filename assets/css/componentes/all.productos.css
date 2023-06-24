@@ -1,0 +1,122 @@
+.header_avatar{
+    width: 4%;
+    height: 4%;
+    background-color: var(--cor-blanco);
+    border-radius: 100%;
+}
+
+section.galeria{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 10%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 25px;
+}
+
+.galeria_encabezado{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.galeria_titulo{
+    font-weight:700;
+    font-size: 32px;
+}
+
+.galeria_boton_producto{
+    width: 144px;
+    height: 51px;
+    background-color: var(--cor-azul);
+    border-color: var(--cor-blanco);
+    border-radius: 10px;
+    color: var(--cor-blanco);
+}
+
+.galeria_contenido{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.galeria_articulos{
+    position: relative;
+    width: 176px;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.galeria_img_edit{
+    position: absolute;
+    filter: invert();
+    top: 8%;
+    left: 70%;
+    filter: invert(0.7) sepia(40%) hue-rotate(170deg) saturate(1200%);
+    cursor: pointer;
+}
+
+.galeria_img_remove{
+    position: absolute;
+    filter: invert();
+    top: 8.2%;
+    left: 85%;
+    filter: invert(0.7) sepia(40%) hue-rotate(170deg) saturate(1200%);
+    cursor: pointer;
+}
+
+.galeria_img{
+    width: 176px;
+    height: 174px;
+}
+
+.galeria_producto{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.galeria_precio{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.galeria_link{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--cor-azul);
+}
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+
+ 
+    
+}
+
+/*Mobile*/
+@media screen and (max-width: 414px){
+
+    section.galeria{
+    margin: 4rem 1rem;  
+    }
+
+    .galeria_img{
+        width: 156px;
+        height: 174px;
+    }
+
+    .galeria_contenido{
+        padding: 0.8rem;
+        justify-content: space-around;
+        
+    }
+    .galeria_articulos{
+        width: 156px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+}
+    

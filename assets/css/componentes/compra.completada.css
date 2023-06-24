@@ -1,0 +1,30 @@
+.compra_container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.compra_container_img{
+    width: 50%;
+}
+
+.compra_container_text{
+    width: 50%;
+}
+
+.compra_descripcion{
+    font-weight: 800;
+}
+
+.compra_total{
+    font-weight: 800;
+}
+
+.boton_compra_nuevo_producto{
+    width: 129px;
+    height: 51px;
+    border-radius: 10px;
+    background-color: var(--cor-azul);
+    color: var(--cor-blanco);
+    font-size: 0.9rem;
+}
