@@ -1,86 +1,74 @@
-section.banner{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: flex-end;
-    width: 100%;
-    margin-top: 1rem
+section.banner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-end;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.banner_img{
-    width: 100%;
-    z-index: -1;
+.banner_img {
+  width: 100%;
+  z-index: -1;
 }
 
-.banner_promociones{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-bottom: 1%;
+.banner_promociones {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-bottom: 1%;
 }
 
-.banner_promociones_mes_promo{
-    font-size: 52px;
-    font-weight: 600;
-    line-height: 3.5rem;
-    color: var(--cor-blanco);
+.banner_promociones_mes_promo {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 3.5rem;
+  color: var(--cor-blanco);
 }
 
-.banner_promociones_promo{
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 2.5rem;
-    color: var(--cor-blanco);
+.banner_promociones_promo {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: var(--cor-blanco);
 }
 
-.banner_promociones_boton{
-    width: 129px;
-    height: 51px;
-    padding: 2.5%;
-    border-radius: 10px;
-    background-color: var(--cor-azul);
-    color: var(--cor-blanco);
-    text-align: center;
+.banner_promociones_boton {
+  width: 129px;
+  height: 51px;
+  padding: 2.5%;
+  border-radius: 10px;
+  background-color: var(--cor-azul);
+  color: var(--cor-blanco);
+  text-align: center;
 }
-
-
-
-
-
 
 /*Tablet*/
-@media screen and (max-width: 768px){
-  
-   
-  
+@media screen and (max-width: 768px) {
 }
 
 /*Mobile*/
-@media screen and (max-width: 414px){
+@media screen and (max-width: 414px) {
+  section.banner {
+    bottom: 0.4rem;
+  }
 
-    section.banner{
-        bottom: 0.4rem;
-    }
-  
-    .banner_promociones_mes_promo{
-        font-size: 22px;
-        font-weight: 600;
-        line-height: 1rem;
+  .banner_promociones_mes_promo {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 0rem;
+  }
 
-    }
-    
-    .banner_promociones_promo{
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 0.5rem;
-    }
-    
-    .banner_promociones_boton{
-        width: 100px;
-        height: 40px;
-    }
-    
-    
- }
+  .banner_promociones_promo {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 2rem;
+  }
+
+  .banner_promociones_boton {
+    width: 100px;
+    height: 40px;
+  }
+}
