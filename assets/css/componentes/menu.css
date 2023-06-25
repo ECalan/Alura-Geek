@@ -140,4 +140,8 @@ a {
     height: 51px;
     margin-right: 1rem;
   }
+
+  .header_boton.opacity {
+    margin-left: 2rem;
+  }
 }
