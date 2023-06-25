@@ -1,7 +1,11 @@
-.modal{
-    backdrop-filter: blur(4px);
-} 
- 
-.modal-content{
-    background-color: rgba(255,255,255,0.5);
+.modal {
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+p {
+  margin-bottom: 0;
 }
