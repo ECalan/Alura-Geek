@@ -140,7 +140,7 @@ section.galeria {
   }
 
   .galeria_contenido {
-    padding: 0 0.8rem;
+    padding: 0;
     justify-content: space-around;
   }
 
