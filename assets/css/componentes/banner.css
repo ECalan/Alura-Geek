@@ -2,6 +2,7 @@ section.banner{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    position: relative;
     align-items: flex-end;
     width: 100%;
     margin-top: 1rem
@@ -9,6 +10,7 @@ section.banner{
 
 .banner_img{
     width: 100%;
+    z-index: -1;
 }
 
 .banner_promociones{
@@ -57,6 +59,10 @@ section.banner{
 
 /*Mobile*/
 @media screen and (max-width: 414px){
+
+    section.banner{
+        bottom: 0.4rem;
+    }
   
     .banner_promociones_mes_promo{
         font-size: 22px;
@@ -68,11 +74,11 @@ section.banner{
     .banner_promociones_promo{
         font-size: 1rem;
         font-weight: 700;
-        line-height: 2.5rem;
+        line-height: 0.5rem;
     }
     
     .banner_promociones_boton{
-        width: 118px;
+        width: 100px;
         height: 40px;
     }
     
