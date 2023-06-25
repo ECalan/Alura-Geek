@@ -138,6 +138,7 @@ a {
   .header_boton {
     width: 118px;
     height: 51px;
+    margin-left: 2rem;
     margin-right: 1rem;
   }
 
