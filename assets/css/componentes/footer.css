@@ -1,160 +1,155 @@
-section.footer{
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 10%;
-    background-color: rgba(255, 255, 255, 0.7);
+section.footer {
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 10%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-.footer_img{
-    cursor: pointer;
+.footer_img {
+  cursor: pointer;
 }
 
-.footer_information{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 288px;
+.footer_information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 288px;
 }
 
-.footer_information_container{
-    display: flex;
-    flex-direction: column;
+.footer_information_container {
+  display: flex;
+  flex-direction: column;
 }
 
-.footer_link{
-    font-weight: 500;
-    color: var(--cor-gris);
-    line-height: 2rem;
+.footer_link {
+  font-weight: 500;
+  color: var(--cor-gris);
+  line-height: 2rem;
 }
 
 /* area message */
 
-.footer_message_container{
-    display: flex;
-    flex-direction: column;
-    width: 576px;
+.footer_message_container {
+  display: flex;
+  flex-direction: column;
+  width: 576px;
 }
 
-.footer_message_titulo{
-    font-weight: 700;
+.footer_message_titulo {
+  font-weight: 700;
 }
 
-.footer_message{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.footer_message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.footer_message_input{
-    height: 56px;
-    border: none;
-    border-radius: 10px;
-    margin: 0.5rem 0;
+.footer_message_input {
+  height: 56px;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5rem 0;
 }
 
-.footer_message_input::placeholder{
-    visibility: hidden;
-    color: #00000000;
+.footer_message_input::placeholder {
+  visibility: hidden;
+  color: #00000000;
 }
-  
-.footer_message_input:focus{
-    outline: none;
+
+.footer_message_input:focus {
+  outline: none;
 }
-  
-.footer_message_input__label{
-    display: block;
-    position: relative;
-    bottom: 4rem;
-    left: 0.5rem;
-    font-size: 1rem;
-    transition: all 0.25s;
+
+.footer_message_input__label {
+  display: block;
+  position: relative;
+  bottom: 4rem;
+  left: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.25s;
 }
-  
+
 .footer_message_input:not(:placeholder-shown) + .footer_message_input__label,
-.footer_message_input:focus + .footer_message_input__label{
-    position: relative;
-    font-size: 0.875rem;
-    transition: all 0.25s;
+.footer_message_input:focus + .footer_message_input__label {
+  position: relative;
+  font-size: 0.875rem;
+  transition: all 0.25s;
 }
 
-.input-container--invalid{
-    margin: 0;
-}
-  
-.input-container--invalid .footer_message_input{
-    border: 1px solid var(--cor-de-advertencia);
-    border-radius: 7px;
-}
-  
-.input-container--invalid .footer_message_input__label{
-    color: var(--cor-de-advertencia);
-}
-  
-.footer_message_input__message__error{
-    display: none;
-}
-  
-.input-container--invalid .footer_message_input__message__error{
-    color: var(--cor-de-advertencia);
-    display: flex;
-    position: relative;
-    bottom: 1.2rem;
+.input-container--invalid {
+  margin: 0;
 }
 
-.footer_message_boton{
-    width: 144px;
-    height: 51px;
-    background-color: var(--cor-azul);
-    border-color: var(--cor-blanco);
-    border-radius: 10px;
-    color: var(--cor-blanco);
+.input-container--invalid .footer_message_input {
+  border: 1px solid var(--cor-de-advertencia);
+  border-radius: 7px;
 }
 
-.footer_developer{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 0;
-    font-weight: 500;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
+.input-container--invalid .footer_message_input__label {
+  color: var(--cor-de-advertencia);
 }
 
-.footer_developer_name{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.footer_message_input__message__error {
+  display: none;
 }
 
-.footer_img_laterales{
-    width: 5%;
+.input-container--invalid .footer_message_input__message__error {
+  color: var(--cor-de-advertencia);
+  display: flex;
+  position: relative;
+  bottom: 1.2rem;
+}
+
+.footer_message_boton {
+  width: 144px;
+  height: 51px;
+  background-color: var(--cor-azul);
+  border-color: var(--cor-blanco);
+  border-radius: 10px;
+  color: var(--cor-blanco);
+}
+
+.footer_developer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.footer_developer_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer_img_laterales {
+  width: 5%;
 }
 
 /*Tablet*/
-@media screen and (max-width: 768px){
-  
-   
-  
+@media screen and (max-width: 768px) {
 }
 
 /*Mobile*/
-@media screen and (max-width: 414px){
-    
-    .footer_img_container{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+@media screen and (max-width: 414px) {
+  .footer_img_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .footer_information{
-        align-items: center;
-        margin-bottom: 1rem;
-    }
+  .footer_information {
+    align-items: center;
+    margin-bottom: 1rem;
+  }
 
-    .footer_img_laterales{
-        width: 5%;
-    }
-
- }
+  .footer_img_laterales {
+    width: 20%;
+  }
+}
