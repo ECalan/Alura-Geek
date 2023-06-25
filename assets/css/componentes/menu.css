@@ -24,6 +24,7 @@ header {
 }
 
 .header__logo {
+  width: 250%;
   cursor: pointer;
 }
 
@@ -102,7 +103,7 @@ a {
   }
 
   .header_search {
-    width: 190px;
+    width: 50%;
   }
 
   .header_container_logo {
