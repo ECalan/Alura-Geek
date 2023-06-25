@@ -134,6 +134,9 @@ section.footer {
 
 /*Tablet*/
 @media screen and (max-width: 768px) {
+  .footer_img_laterales {
+    width: 10%;
+  }
 }
 
 /*Mobile*/
