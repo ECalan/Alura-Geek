@@ -50,6 +50,41 @@ carritoMostrado.addEventListener("click", (e) => {
   }, 120000);
 });
 
+document.addEventListener("click", (e) => {
+  //Evita ejecutar código si el clic proviene de un elemento específico
+  if (
+    e.target.matches(".header__logo") ||
+    e.target.matches(".carrito_img") ||
+    e.target.matches(".header_boton") ||
+    e.target.matches(".header_busqueda_icono") ||
+    e.target.matches(".header_busqueda_icono2") ||
+    e.target.matches(".banner_promociones_boton") ||
+    e.target.matches(".img_individual") ||
+    e.target.matches(".producto_individual") ||
+    e.target.matches(".precio_individual") ||
+    e.target.matches(".boton_quita_carrito") ||
+    e.target.matches(".galeria_ver_todo") ||
+    e.target.matches(".galeria_link") ||
+    e.target.matches(".footer_img") ||
+    e.target.matches(".footer_link") ||
+    e.target.matches(".footer_message_input") ||
+    e.target.matches(".footer_message_boton") ||
+    e.target.matches(".btn-close") ||
+    e.target.matches(".form_login_input") ||
+    e.target.matches(".form_login_boton") ||
+    e.target.matches(".form_registro_input") ||
+    e.target.matches(".form_registro_boton") ||
+    e.target.matches(".form_login_eye-show") ||
+    e.target.matches(".btn")
+  ) {
+    return;
+  }
+
+  // Código que se ejecutará cuando haya un clic en cualquier lugar de la página
+  const carrito = document.querySelector(".collapse-horizontal");
+  carrito.classList.remove("show");
+});
+
 //Compras en el carrito
 export function comprasIndividual(image) {
   const comprado = document.getElementById("carrito_badge");
