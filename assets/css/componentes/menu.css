@@ -141,7 +141,7 @@ a {
   .header_boton {
     width: 118px;
     height: 51px;
-    margin-left: 2rem;
+    margin-left: 0;
     margin-right: 1rem;
   }
 
