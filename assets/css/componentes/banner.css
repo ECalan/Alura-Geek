@@ -22,14 +22,14 @@ section.banner {
 }
 
 .banner_promociones_mes_promo {
-  font-size: 52px;
+  font-size: 3.5rem;
   font-weight: 600;
   line-height: 3.5rem;
   color: var(--cor-blanco);
 }
 
 .banner_promociones_promo {
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 2.5rem;
   color: var(--cor-blanco);
@@ -56,15 +56,15 @@ section.banner {
   }
 
   .banner_promociones_mes_promo {
-    font-size: 22px;
+    font-size: 1.5rem;
     font-weight: 600;
-    line-height: 0rem;
+    line-height: 0;
   }
 
   .banner_promociones_promo {
     font-size: 1rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 1.6rem;
   }
 
   .banner_promociones_boton {
