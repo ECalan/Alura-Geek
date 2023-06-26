@@ -36,15 +36,16 @@ export function encontrado(gatilloLink, image) {
 
         gatilloLink.click();
 
-        const displayActual = document.querySelector(".header_barra_busqueda");
+        const displayActual = document.querySelector(".header_busqueda_icono2");
         const estiloComputado = window.getComputedStyle(displayActual);
         const valorDisplay = estiloComputado.getPropertyValue("display");
-        console.log(valorDisplay);
 
-        if (valorDisplay == "block") {
+        if (valorDisplay == "flex") {
           document.querySelector(".header_container_logo").style.display =
             "block";
           document.querySelector("#loginup").style.display = "block";
+          document.querySelector(".header_barra_busqueda").style.display =
+            "none";
         }
 
         setTimeout(() => {
