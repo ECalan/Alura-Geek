@@ -36,6 +36,17 @@ export function encontrado(gatilloLink, image) {
 
         gatilloLink.click();
 
+        const displayActual = document.querySelector(".header_barra_busqueda");
+        const estiloComputado = window.getComputedStyle(displayActual);
+        const valorDisplay = estiloComputado.getPropertyValue("display");
+        console.log(valorDisplay);
+
+        if (valorDisplay == "block") {
+          document.querySelector(".header_container_logo").style.display =
+            "block";
+          document.querySelector("#loginup").style.display = "block";
+        }
+
         setTimeout(() => {
           document.querySelector("#boton_search").value = "";
         }, 1200);
@@ -43,3 +54,13 @@ export function encontrado(gatilloLink, image) {
     }
   });
 }
+
+const botonBusqueda = document.querySelector(".header_busqueda_icono2");
+
+botonBusqueda.addEventListener("click", () => {
+  console.log("buscar");
+
+  document.querySelector(".header_container_logo").style.display = "none";
+  document.querySelector("#loginup").style.display = "none";
+  document.querySelector(".header_barra_busqueda").style.display = "block";
+});
