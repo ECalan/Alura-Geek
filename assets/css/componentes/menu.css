@@ -132,7 +132,7 @@ a {
     position: absolute;
     width: 60px;
     margin: 0;
-    top: 215px;
+    top: 220%;
     left: 38px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
@@ -141,7 +141,6 @@ a {
   .header_boton {
     width: 118px;
     height: 51px;
-    margin-left: 0;
     margin-right: 1rem;
   }
 
